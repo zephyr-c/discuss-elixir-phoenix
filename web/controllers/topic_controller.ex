@@ -9,4 +9,8 @@ defmodule Discuss.TopicController do
         render conn, "new.html", changeset: changeset
         # phoenix will look for this in the topic folder because we are in the topic controller
     end
+
+    def create(conn, %{"topic" => topic} = params) do
+        
+    end
 end
