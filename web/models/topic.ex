@@ -1,5 +1,6 @@
 defmodule Discuss.Topic do
-    use Discuss.Web, :model
+    # automatically creates struct with same name as module
+    use Discuss.Web, :model 
 
 
     schema "topics" do
@@ -14,6 +15,7 @@ defmodule Discuss.Topic do
     def changeset(struct, params \\ %{}) do
         struct
         |> cast(params, [:title])
+        # takes in changeset and list of fields requiring property/defined value
         |> validate_required([:title])
     end
 end
